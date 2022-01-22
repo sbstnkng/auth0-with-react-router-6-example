@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { NavLink, Outlet } from 'react-router-dom';
+import styles from './App.module.css';
+import Header from './Header';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <div>
+      <Header />
+      <nav className={styles.navigation}>
+        <NavLink
+          to="/"
+          className={({ isActive }) => (isActive ? styles.active : '')}
         >
-          Learn React
-        </a>
-      </header>
+          Home
+        </NavLink>
+        <NavLink
+          to="/invoices"
+          className={({ isActive }) => (isActive ? styles.active : '')}
+        >
+          Invoices
+        </NavLink>
+        <NavLink
+          to="/expenses"
+          className={({ isActive }) => (isActive ? styles.active : '')}
+        >
+          Expenses
+        </NavLink>
+      </nav>
+      <Outlet />
     </div>
   );
-}
+};
 
 export default App;

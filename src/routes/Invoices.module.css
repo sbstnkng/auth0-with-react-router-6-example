@@ -1,0 +1,19 @@
+.main {
+  display: flex;
+}
+
+.navigation {
+  border-right: solid 1px;
+  padding: 1rem;
+}
+
+.link {
+  display: block;
+  margin: 1rem 0;
+}
+
+.activeLink {
+  display: block;
+  margin: 1rem 0;
+  color: red;
+}

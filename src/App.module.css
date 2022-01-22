@@ -1,0 +1,20 @@
+.navigation {
+  border-bottom: solid 1px;
+  padding-bottom: 1rem;
+}
+
+.navigation > * {
+  margin-right: 1rem;
+}
+
+.navigation > *:last-child {
+  margin-right: 0;
+}
+
+.navigation > *:hover {
+  color: red;
+}
+
+.active {
+  color: red;
+}
