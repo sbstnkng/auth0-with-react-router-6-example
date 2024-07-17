@@ -9,3 +9,7 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "daily"
+    ignore:
+      # Ignore major version updates for `typescript` due to incompatibility with `react-scripts`
+      - dependency-name: 'typescript'
+        update-types: [ version-update:semver-major ]
